@@ -33,8 +33,7 @@ class InputURL extends React.Component {
       //Clear input box & reset validity
       this.setState({ url: "", valid: true });
     } else {
-      //if attempting to submit with empty URL, valid = false will show
-      //error message
+      //Empty URL is invalid
       this.setState({ valid: false });
     }
   }
