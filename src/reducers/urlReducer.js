@@ -13,6 +13,8 @@ export default function urlReducer(state = initialState, action) {
       let urls = [action.url, ...state.urls];
       return Object.assign({}, state, { urls, isFetching: false });
     }
+    case types.API_CALL_FAILURE:
+      return Object.assign({}, state, { isFetching: false });
     case types.CLEAR_URLS:
       return Object.assign({}, state, { urls: [] });
     default:
